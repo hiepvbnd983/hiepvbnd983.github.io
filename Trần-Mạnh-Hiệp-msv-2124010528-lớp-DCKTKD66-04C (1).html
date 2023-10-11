@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--in this project i usually use % because this makes my website resizable to fit the device-->
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Montserrat", sans-serif
+    }
+    set default for all element
+    * {
+      margin: 5% 5%;
+      padding: 0;
+    }
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+    }
+    .fa {
+      color: #ffffff;
+      font-size: larger;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .sidebar {
+      font-size: large;
+      text-decoration: none;
+      position: fixed;
+      margin: 0;
+      width: 10%;
+      height: 100%;
+      text-align: center;
+      background-color: black;
+    }
+
+    .head {
+      display: none;
+      flex-wrap: wrap;
+      font-size: x-large;
+      width: 100%;
+      padding:  2% 0;
+      position: fixed;
+      justify-content: space-evenly;
+    }
+    .sticky{
+      position: fixed;
+      background: #757575;
+      
+    }
+    .main {
+      margin: 5% 5% 0 20%;
+      width: 100%;
+    }
+
+    .title {
+      font-weight: 100;
+      font-size: x-large;
+      color: #fff;
+      margin: 2% 0 0 2%;
+    }
+
+    .Description {
+      text-align: left;
+      color: #757575;
+      margin: 5% 0;
+    }
+
+    .skill {
+      background: #fff;
+      margin: 0.5% 0;
+    }
+
+    .slide {
+      background: #757575;
+    }
+
+    .index {
+      display: flex;
+      background-color: #ffffff;
+      justify-content: space-evenly;
+      text-align: center;
+      height: 5%;
+      font-size: large;
+      align-items: center;
+      margin: 2% 0;
+    }
+
+    .half {
+      padding: 0;
+      width: 48%;
+      text-align: center;
+      margin: 1%;
+      background-color: #757575;
+    }
+
+    li {
+      list-style: none;
+      padding: 4% 0;
+      border: 1px solid gray;
+    }
+
+    .big {
+      color: #757575;
+      background: #222;
+      border: none;
+      padding: 5% 0;
+      font-size: xx-large;
+    }
+
+    .padding img {
+      margin-bottom: 12px
+    }
+    footer{
+      margin: 5%;
+      color: #ababab;
+    }
+    @media only screen and (max-width: 600px) {
+      .sidebar {
+        display: none;
+      }
+      .head{
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Icon Bar (Sidebar - hidden when screens samll than 600px) -->
+  <nav class="sidebar">
+    <!-- Avatar image in top left corner -->
+    <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/364660138_1693188811149643_4474965888849366085_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=fe8171&_nc_ohc=yGXr1mrusagAX8eQmL5&_nc_ht=scontent.fhan14-3.fna&oh=00_AfBc-vU8BBidNkeOIpxxlLpO9qLVNtK_SiB-kwP5GeR0gg&oe=651B7040" style="width:100%;">
+    <!--Press to move to the corresponding location -->
+    <a href="#" onclick="scrollToPosition(0)">
+      <!--add a function (scrolltoposition) whose parameter is the value that when clicked will scroll to -->
+      <i class="fa fa-home"></i>
+      <p>home</p>
+    </a>
+    <a href="#about"  onclick="scrollToPosition(12500)">
+      <i class="fa fa-user"></i>
+      <p>ABOUT</p>
+    </a>
+    <a href="#photos"  onclick="scrollToPosition(1750)">
+      <i class="fa fa-eye"></i>
+      <p>ACHIEVE</p>
+    </a>
+    <a href="#contact" onclick="scrollToPosition(2750)">
+      <i class="fa fa-envelope"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
+
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="head">
+    <a href="#" onclick="scrollToPosition(0)">HOME</a>
+    <a href="#about" onclick="scrollToPosition(1200)">ABOUT</a>
+    <a href="#photos" onclick="scrollToPosition(1750)">ACHIEVE</a>
+    <a href="#contact" onclick="scrollToPosition(2750)">CONTACT</a>
+  </div>
+  <div class="main">
+    <!-- Header/Home -->
+    <header style="color: #fff;text-align: center;">
+      <h1 class="title" style="font-size: xxx-large;">I'm hiệp .</h1>
+      <p style="margin: 1% 0;">Marketing management</p>
+      <img style="width: 100%;"
+      src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/364660138_1693188811149643_4474965888849366085_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=fe8171&_nc_ohc=yGXr1mrusagAX8eQmL5&_nc_ht=scontent.fhan14-3.fna&oh=00_AfBc-vU8BBidNkeOIpxxlLpO9qLVNtK_SiB-kwP5GeR0gg&oe=651B7040" alt="boy" class="skill" width="992" height="1108">
+    </header>
+
+    <!-- About Section -->
+    <!--one pragraph introduct name , habbit,....-->
+    <div class="Description">
+      <h2 class="title" style="margin: 0;">My Name</h2>
+      <hr style="width:200px;margin-bottom :2%;">
+      <p style="font-family: Montserrat, sans-serif"></p>Some text about me. Some text about me. I am lorem ipsum
+      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+      nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <h3 class="title">My Skills</h3>
+      <p style="color: #fff;">Photography</p>
+      <div class="skill">
+        <div class="slide" style="height:28px;width:95%"></div>
+      </div>
+      <p style="color: #fff;">Web Design</p>
+      <div class="skill">
+        <div class="slide" style="height:28px;width:85%"></div>
+      </div>
+      <p style="color: #fff;">Photoshop</p>
+      <div class="skill">
+        <div class="slide" style="height:28px;width:80%"></div>
+      </div><br>
+    </div>
+    <h3 class="title">My Price</h3>
+    <!--table about achive of me-->
+    <div class="index">
+      <div>
+        <span>11+</span><br>
+        Partners
+      </div>
+      <div>
+        <span>55+</span><br>
+        Projects Done
+      </div>
+      <div>
+        <span>89+</span><br>
+        Happy Clients
+      </div>
+      <div>
+        <span>150+</span><br>
+        Meetings
+      </div>
+    </div>
+
+    <button style="
+    margin: 2% 0;
+    height: 1.5%;
+    padding: 1%;">
+      <i class="fa fa-download" style="color: black;"></i> Download Resume
+    </button>
+
+    <!-- description about work i was -->
+    <div class="table" style="display: flex;">
+      <ul class="half">
+        <li>time work</li>
+        <li>company</li>
+        <li>position</li>
+        <li>Projects</li>
+      </ul>
+      <ul class="half">
+          <li>2023</li>
+          <li>th true milk</li>
+          <li>Marketing management</li>
+          <li>work a,b ,c , d</li>
+          <li style="background: rgb(81, 81, 81);">
+            <button style="padding: 1%;background: #ababab;">more</button>
+          </li>
+        </ul>
+      <ul class="half">
+        <li>2023</li>
+        <li>th true milk</li>
+        <li>Marketing management</li>
+        <li>work a,b ,c , d</li>
+          <li style="background: rgb(81, 81, 81);">
+            <button style="  padding: 1%;  background: #ababab;">more</button>
+          </li>
+        </ul>
+    </div>
+    <!--some repution about me from the boss was worked for-->
+    <h3 class="title">My Reputation</h3>
+    <div style="color: #fff;">
+      <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/364660138_1693188811149643_4474965888849366085_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=fe8171&_nc_ohc=yGXr1mrusagAX8eQmL5&_nc_ht=scontent.fhan14-3.fna&oh=00_AfBc-vU8BBidNkeOIpxxlLpO9qLVNtK_SiB-kwP5GeR0gg&oe=651B7040" alt="Avatar"
+        style="border-radius:10% ;width:10%;float:left;margin-left: 2%;">
+      <p style="margin: 3% 0 2% 13%;"><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+      <p style="margin: 3% 0 2% 13%;">John Doe saved us from a web disaster.</p><br>
+    </div>
+    <div style="color: #fff;">
+      <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-1/364660138_1693188811149643_4474965888849366085_n.jpg?stp=dst-jpg_p200x200&_nc_cat=103&ccb=1-7&_nc_sid=fe8171&_nc_ohc=yGXr1mrusagAX8eQmL5&_nc_ht=scontent.fhan14-3.fna&oh=00_AfBc-vU8BBidNkeOIpxxlLpO9qLVNtK_SiB-kwP5GeR0gg&oe=651B7040" alt="Avatar"
+        style="border-radius:10% ;width:10%;float:left;margin-left: 2%;">
+      <p style="margin: 3% 0 2% 13%;"><span>rebeca flex</span> CEO at company</p>
+      <p style="margin: 3% 0 2% 13%;">No one is better than John Doe</p><br>
+    </div>
+
+    <!-- Contact Section -->
+    <h2 class="title">Contact Me</h2>
+    <hr style="width:200px;margin :2%;">
+
+    <div style="color: #757575;font-size: small;">
+      <p><i class="fa fa-map-marker" style="font-size: xx-large;margin: 1%;"></i> Chicago, US</p>
+      <p><i class="fa fa-phone" style="font-size: xx-large;margin: 1%;"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope" style="font-size: xx-large;margin: 1%;"> </i> Email: mail@mail.com</p>
+    </div><br>
+    <p style="color: #757575;">Let's get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <input style="margin: 1% 0;width: 90%;padding: 2% 2%;" type="text" placeholder="Name" required name="Name">
+      <input style="margin: 1% 0;width: 90%;padding: 2% 2%;" type="text" placeholder="Email" required name="Email">
+      <input style="margin: 1% 0;width: 90%;padding: 2% 2%;" type="text" placeholder="Subject" required name="Subject">
+      <input style="margin: 1% 0;width: 90%;padding: 2% 2%;" type="text" placeholder="Message" required name="Message">
+      <p>
+        <button style="width: 20%; color: #757575;" type="submit">
+          <i class="fa fa-paper-plane" style="padding: 5%;color: black;"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  <footer >
+    <i  style="color: #757575;margin: 1%;" class="fa fa-facebook-official"></i>
+    <i class="fa fa-instagram" style="color: #757575;margin: 1%;"></i>
+    <i class="fa fa-snapchat" style="color: #757575;margin: 1%;"></i>
+    <i class="fa fa-pinterest-p" style="color: #757575;margin: 1%;"></i>
+    <i class="fa fa-twitter" style="color: #757575;margin: 1%;"></i>
+    <i class="fa fa-linkedin" style="color: #757575;margin: 1%;"></i>
+    <p class="w3-medium">Powered by trần mạnh hiệp </p>
+  </footer>
+</div>
+</body>
+<!-- this js will add class for the slidebar when user scroll down-->
+<script>
+  window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.querySelector(".head");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+function scrollToPosition(position) {
+  console.log(position)
+  window.scrollTo({
+    top: position,
+    // Scroll to the specified vertical position with smooth animation
+    behavior: 'smooth'
+  });
+}
+</script>
+</html>
